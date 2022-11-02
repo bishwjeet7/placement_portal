@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/studentStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Student Portal</title>
+</head>
+<body style="color: black;">
+    <!-- <h2>student</h2> -->
+    <div id="menu">
+        <menu>
+            <i id="bar" class="fa-solid fa-bars"></i>
+            <div id="menuBox">
+                <div id="reg" class="menubar">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div class="menuName">Registration</div>
+                </div>
+                <div id="profile" class="menubar">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="menuName">Profile View</div>
+                </div>
+                <div id="annou" class="menubar">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="menuName">Announcement</div>
+                </div>
+                <div id="drives" class="menubar">
+                    <i class="fa-solid fa-address-card"> </i>
+                    <div class="menuName">Upcoming drives</div>
+                </div>
+                <div id="driveReg" class="menubar">
+                    <i class="fa-solid fa-address-card"> </i>
+                    <div class="menuName">Drive Regestaion</div>
+                </div>
+                <div id="usersummary" class="menubar">
+                    <i class="fa-solid fa-file"></i>
+                    <div class="menuName">Summary</div>
+                </div>
+            </div>
+        </menu>
+        <div id="logout">
+            <div class="userlogout">
+                <i class="fa-solid fa-user"></i>
+                <div class="labelName">Bishwjeet </div>
+            </div>
+            <div class="userlogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <div class="labelName" id="logoutuserFromSesson">Logout</div>
+            </div>
+        </div>
+    </div>
+    <div id="contentBox">
+        <div id="content" style="display: none;">
+            <div class="Career_Services_Registration">
+                <h3>Career Services Registration</h3>
+            </div>
+            <div class="impNotes">
+                <p>
+                    All mandatory fields are marked as *.
+                    <br>
+                    In case if any information like Father's Mobile No. Address, etc. are shown incorrectly, then you can submit your profile update request through one of the following channels for necessary update in admission records:<br>
+                    UMS Navigation > Examination System > Certificate Request > [Accept] > Update Student Information
+                    OR<br>
+                    RMS under Category: Division of Examination-Academics (Operational Issues) > Records (Certificates/Verification)<br>
+                    This update may take upto 2 working days. Avoid duplicate requests through multiple channels.
+                </p>
+            </div>
+                <br>
+                <div id="placementpage">
+                    <h3>Personal Detail</h3>
+                </div>
+                <br>
+                <div id="personal_detail">
+                    <form>
+                        <div id="infoleft">
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="selectedprogram">Selected Program</label>
+                                <label class="lebelBold" for="programselected">B.Tech (CSE / IT)</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Pro Reg No</label>
+                                <!-- <input type="text" id="regno" placeholder="Enter your name" /> -->
+                                <label class="lebelBold" for="myreg">12010226</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="name">Name :</label>
+                                <input type="text" id="name" placeholder="Enter your name" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="age">Age :</label>
+                                <input type="text" id="age" name="age" placeholder="Enter your age" />
+                            </div>
+                            <div class="placementinputFieldGender">
+                                <label class="lebelBold" for="gender">Gender :</label>
+                                <input type="radio" name="gender" id="">Male
+                                <input type="radio" name="gender" id="">Male
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="dob">DOB :</label>
+                                <input type="date" id="dob">
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="height">Height</label>
+                                <select name="feet" id="feet">
+                                    <option value="select feet" selected>Select feet</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                  </select>
+                                  <select name="inch" id="inch">
+                                    <option value="select Inch" selected>Select Inch</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                  </select>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mob">Mobile :</label>
+                                <input type="number" id="number" placeholder="Phone Number" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="email">Email ID :</label>
+                                <input type="email" id="email" name="email" placeholder="example@gmail.com" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="nationality">Nationality :</label>
+                                <input type="text" id="nationality" name="Nationality" placeholder="Nationality" />
+                            </div>
+                            
+                        </div>
+                        <div id="inforight">
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fathername">Father Name :</label>
+                                <input type="text" id="fathername" placeholder="Father Name" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mothername">Mother Name :</label>
+                                <input type="text" id="mothername" name="mothername" placeholder="Mother Name" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatheroccupation">Father Occupation :</label>
+                                <input type="text" id="fatheroccupation" name="fatheroccupation" placeholder="Father Occupation" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="motheroccupation">Mother Occupation :</label>
+                                <input type="text" id="motheroccupation" name="motheroccupation" placeholder="Mother Occupation" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fathermob">Father Mobile No :</label>
+                                <input type="text" id="fathermob" name="fathermob" placeholder="Mobile Number" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mothermob">Mother Mobile No :</label>
+                                <input type="text" id="mothermob" name="mothermob" placeholder="Mobile Number" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatheremail">Father E-Mail ID :</label>
+                                <input type="text" id="fatheremail" name="fatheremail" placeholder="example@gmail.com" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatherincome">Father Income :</label>
+                                <input type="text" id="fatherincome" name="fatherincome" placeholder="Income" />
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="motherincome">Mother Income :</label>
+                                <input type="text" id="motherincome" name="motherincome" placeholder="Income" />
+                            </div>
+                        </div>
+                      </form>
+                </div>
+                
+                <div id="useraddress">
+                    <h3>Address</h3>
+                </div>
+                <div id="address">
+                    <form action="/form/submit" method="post">
+                        <div id="infoleft"><br>
+                            <h3>Permanent Address</h3><br>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="address">Address :</label>
+                                <label for="address">Chak Hakim</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="district">District :</label>
+                                <label for="district">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="pincode">PIN Code :</label>
+                                <label for="pincode">144402</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="policestation">Police Station :</label>
+                                <label for="policestation">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="state">State :</label>
+                                <label for="state">Punjab</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="Country">Country :</label>
+                                <label for="Country">India</label>
+                            </div> 
+                        </div>
+                        <div id="inforight"><br>
+                            <h3>Correspondence Address </h3><br>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="address">Address :</label>
+                                <label for="address">Chak Hakim</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="district">District :</label>
+                                <label for="district">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="pincode">PIN Code :</label>
+                                <label for="pincode">144402</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="policestation">Police Station :</label>
+                                <label for="policestation">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="state">State :</label>
+                                <label for="state">Punjab</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="Country">Country :</label>
+                                <label for="Country">India</label>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+
+                <div id="usercurrenteducation">
+                    <h3>Current Qualification Details</h3>
+                </div>
+                <div id="currentedu">
+                    <form>
+                        <div id="infoleft"><br>
+                            <br>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="Program">Program :</label>
+                                <label for="Program">B.Tech. (Computer Science & Engineering)</label>
+                            </div>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="startyear">Starting Batch year :</label>
+                                <label for="startyear">2022</label>
+                            </div>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="passingyear">Passing Batch year :</label>
+                                <label for="passingyear">2024</label>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+        </div>
+
+        <!-- Start    profile View -->
+        <div id="profileView">
+            <div id="userimage">
+                <img id="profileimg" src="img/Photo1.jpg">
+                <br><br>
+            </div>
+                <div id="placementpage">
+                    <h3>Personal Detail</h3>
+                </div>
+                <br>
+                <div id="personal_detail">
+                    <form>
+                        <div id="infoleft">
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="selectedprogram">Selected Program</label>
+                                <label class="lebelBold" for="programselected">B.Tech (CSE / IT)</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Prov Reg No</label>
+                                <label class="lebelBold" for="myreg">12010226</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Placement Id</label>
+                                <label class="lebelBold" for="myreg">370557</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Basic Details</label>
+                                <label class="lebelBold" for="myreg">Filled (Policy Accepted)</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Placement Services Status</label>
+                                <label class="lebelBold" for="myreg">Active</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Company Selected In</label>
+                                <label class="lebelBold" for="myreg">Not Selected</label>
+                            </div>
+                            <hr>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="name">Name :</label>
+                                <label>Bishwjeet kumar</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="age">Age :</label>
+                                <label>19</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="gender">Gender :</label>
+                                <label>Male</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="dob">DOB :</label>
+                                <label>06/05/2003</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="height">Height</label>
+                                <label>5'10"</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mob">Mobile :</label>
+                                <label>+91 93049 89643</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="email">Email ID :</label>
+                                <label>bishwjeet7250@gmail.com</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="nationality">Nationality :</label>
+                                <label>Indian</label>
+                            </div>
+                            
+                        </div>
+                        <div id="inforight">
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">CGPA</label>
+                                <label class="lebelBold" for="myreg">7.23</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Reappear/Backlog</label>
+                                <label class="lebelBold" for="myreg">0</label>
+                            </div>
+                            
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">X Marks(PassOut)</label>
+                                <label class="lebelBold" for="myreg">83.8% (2018)</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">XII Marks</label>
+                                <label class="lebelBold" for="myreg">70.6 % (2020)</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">Graduation Marks</label>
+                                <label class="lebelBold" for="myreg">0</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="regno">PEP Fee Details</label>
+                                <label class="lebelBold" for="myreg">&#8377 7000 (Due - &#8377 7000)</label>
+                            </div>
+                            <hr>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fathername">Father Name :</label>
+                                <label>Rajesh Prasad</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mothername">Mother Name :</label>
+                                <label>Nilam Devi</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatheroccupation">Father Occupation :</label>
+                                <label>Business Man</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="motheroccupation">Mother Occupation :</label>
+                                <label>House Wife</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fathermob">Father Mobile No :</label>
+                                <label>+91 62995 59575</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="mothermob">Mother Mobile No :</label>
+                                <label>+91 95789 65412</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatheremail">Father E-Mail ID :</label>
+                                <label>rajeshprasad@gmail.com</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="fatherincome">Father Income :</label>
+                                <label>&#8377 10,00,000</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="motherincome">Mother Income :</label>
+                                <label>&#8377 5,00,000</label>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+                
+                <div id="useraddress">
+                    <h3>Address</h3>
+                </div>
+                <div id="address">
+                    <form action="/form/submit" method="post">
+                        <div id="infoleft"><br>
+                            <h3>Permanent Address</h3><br>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="address">Address :</label>
+                                <label for="address">Chak Hakim</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="district">District :</label>
+                                <label for="district">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="pincode">PIN Code :</label>
+                                <label for="pincode">144402</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="policestation">Police Station :</label>
+                                <label for="policestation">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="state">State :</label>
+                                <label for="state">Punjab</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="Country">Country :</label>
+                                <label for="Country">India</label>
+                            </div> 
+                        </div>
+                        <div id="inforight"><br>
+                            <h3>Correspondence Address </h3><br>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="address">Address :</label>
+                                <label for="address">Chak Hakim</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="district">District :</label>
+                                <label for="district">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="pincode">PIN Code :</label>
+                                <label for="pincode">144402</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="policestation">Police Station :</label>
+                                <label for="policestation">Phagwara</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="state">State :</label>
+                                <label for="state">Punjab</label>
+                            </div>
+                            <div class="placementinputField">
+                                <label class="lebelBold" for="Country">Country :</label>
+                                <label for="Country">India</label>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+
+                <div id="usercurrenteducation">
+                    <h3>Current Qualification Details</h3>
+                </div>
+                <div id="currentedu">
+                    <form>
+                        <div id="infoleft"><br>
+                            <br>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="Program">Program :</label>
+                                <label for="Program">B.Tech. (Computer Science & Engineering)</label>
+                            </div>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="startyear">Starting Batch year :</label>
+                                <label for="startyear">2022</label>
+                            </div>
+                            <div class="placementQualificationdetail">
+                                <label class="lebelBold" for="passingyear">Passing Batch year :</label>
+                                <label for="passingyear">2024</label>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+        </div>
+        <div id="announcement" style="display: none;">
+            <div id="announcementMainBox">
+                <div class="message">
+                    <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                    <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                    <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                    <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                    <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+                </div>
+                <div class="message">
+                  <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                  <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                  <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                  <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                  <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+              </div>
+                <div class="message">
+                    <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                    <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                    <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                    <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                    <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+                </div>
+                <div class="message">
+                    <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                    <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                    <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                    <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                    <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+                </div>
+                <div class="message">
+                    <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                    <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                    <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                    <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                    <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+                </div>
+                <div class="message">
+                    <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                    <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                    <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                    <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                    <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+                </div>   
+            </div>      
+        </div>
+        <div id="upcomingDrives" style="display: none;">
+            <div id="placementpage">
+                <h3>Upcoming Drives</h3>
+            </div>
+            <div id="upcomingDrivesregestrationBox">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job Profile</th>
+                        <th>Register</th>
+                    </tr>
+                    <tr> 
+                        <td>TCS</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="tcs" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Infosis</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="infosis" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Capzamni</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="capzamni" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Cognizent</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Cognizent"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Adobe</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Adobe"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Google</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Google"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Yahoo</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Yahoo"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Meta</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Meta"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Amazon</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Amazon"type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Suzlon</td>
+                        <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                        <td><button id="Suzlon" type="button">Click To Register</button></td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <div id="driveRegestaion" style="display: none;">
+            <div id="placementpage">
+                <h3>Drive Regestaion</h3>
+            </div>
+            <div id="upcomingDrivesregestrationBox">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Register</th>
+                    </tr>
+                    <tr> 
+                        <td>TCS</td>
+                        <td><button id="TCS" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Infosis</td>
+                        <td><button id="Infosis" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Capzamni</td>
+                        <td><button id="capz" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Cognizent</td>
+                        <td><button id="Cogni" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Adobe</td>
+                        <td><button id="Ado" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Google</td>
+                        <td><button id="Goog" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Yahoo</td>
+                        <td><button id="Yaho" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Meta</td>
+                        <td><button id="MetaFa" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Amazon</td>
+                        <td><button id="Amaz" type="button">Click To Register</button></td>
+                    </tr>
+                    <tr> 
+                        <td>Suzlon</td>
+                        <td><button id="Suzl" type="button">Click To Register</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="summary" style="display: none;">
+            <div id="placementpage">
+                <h3>Summary</h3>
+            </div>
+            <div>
+                <form>
+                    <div id="summaryinfoleft">
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="selectedprogram">Total Drives Held</label>
+                            <label class="lebelBold" for="programselected">882</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="regno">Total Drives Eligible For</label>
+                            <label class="lebelBold" for="myreg">39</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="regno">Total drives Registered in</label>
+                            <label class="lebelBold" for="myreg">5</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="regno">Participated</label>
+                            <label class="lebelBold" for="myreg">1</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="regno">Selected</label>
+                            <label class="lebelBold" for="myreg">0</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="regno">Total Must Attend</label>
+                            <label class="lebelBold" for="myreg">0</label>
+                        </div>
+                        <div class="placementinputField">
+                            <label class="lebelBold" for="name">Total May Attend</label>
+                            <label>39</label>
+                        </div>
+                    </div>
+                  </form>
+            </div>
+            <div>
+                <hr>
+                <div id="placementpage">
+                    <h3>Recently Visited Companies</h3>
+                </div>
+                <div id="upcomingDrivesregestrationBox">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Stream</th>
+                            <th>Salary Package</th>
+                        </tr>
+                        <tr> 
+                            <td>TCS</td>
+                            <td>MBA</td>
+                            <td>CTC Rs. 3.76 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Infosis</td>
+                            <td>CSE/IT</td>
+                            <td>CTC Rs. 3.5 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Capzamni</td>
+                            <td>Polytechnic</td>
+                            <td>CTC Rs. 4.6 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Cognizent</td>
+                            <td>CSE/IT,MBA</td>
+                            <td>CTC Rs. 3.5 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Adobe</td>
+                            <td>CSE/IT</td>
+                            <td>CTC Rs. 16.2 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Google</td>
+                            <td>CSE/IT</td>
+                            <td>CTC Rs. 70.00 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Yahoo</td>
+                            <td>MBA</td>
+                            <td>Click To Register</td>
+                        </tr>
+                        <tr> 
+                            <td>Meta</td>
+                            <td>CSE</td>
+                            <td>CTC Rs. 23.5 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Amazon</td>
+                            <td>ECE</td>
+                            <td>CTC Rs. 43.5 LPA</td>
+                        </tr>
+                        <tr> 
+                            <td>Suzlon</td>
+                            <td>CSE</td>
+                            <td>CTC Rs. 3.5 LPA</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- Pop banner for company detail Start -->
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Company Details</p>
+              <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <!-- Content ... -->
+              <p><strong>Drive Code : </strong>TE.30317.2024.33099</p>
+              <p><strong>Name & Type of Event : </strong>Developer</p>
+              <p><strong>Company Name: </strong>TCS</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore enim velit nesciunt totam ea illum necessitatibus id aliquid doloribus rem.</p>
+              <details>
+                  <summary>Job Description</summary>
+                    <p><strong>Program/Stream : </strong>All Program</p>
+                    <p><strong>Designation : </strong>Frontened Web Developer</p>
+                    <p><strong>Eligibility : </strong>No Backlog</p>
+                    <p><strong>Salary Package : </strong>68,000</p>
+                    <p><strong>Job Location : </strong>Noida, Delhi</p>
+              </details>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button">Close</button>
+            </footer>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Pop banner for company detail END -->
+</div>
+
+<script src="js/studentPopupforplacementReg.js"></script>
+    <script src="js/studentScript.js"></script>
+    <script src="js/studentreg.js"></script>
+</body>
+</html>

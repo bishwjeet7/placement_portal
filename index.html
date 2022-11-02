@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/indexStyle.css">
+</head>
+<body>
+    <video id="vid" src="Tech-A-Thon.mp4" autoplay muted loop></video>
+    <div id="inputForm">
+        <div id="userlogo">
+            <img id="imguser" src="img/user.png">
+        </div>
+        <form>
+            <div id="username">
+                <i class="fa-solid fa-user"></i>
+                <div id="usernameInputfield">
+                    <input id="user" class="inputfi" type="text" name="Username" placeholder="username">
+                </div>
+            </div>
+            <div id="pass">
+                <i class="fa-solid fa-lock"></i>
+                <div id="passwordInputField">
+                    <input id="userpass" class="inputfi" type="password" name="pass" placeholder="Password">
+                </div>
+            </div>
+            <div id="submitbtn">
+                <button id="btn1"  type="submit">Login</button>
+            </div>
+            <div id="forgotpass">
+                <h3><a href="#">Forgot Password </a></h3>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const input = document.querySelector('input[name="Username"]');
+        form.onsubmit = (e) => {
+            e.preventDefault()
+            // console.log(input.value.length);
+
+            var val = input.value.length;
+            if (val == 5) {
+                window.location.href = "teacher.html";
+            }
+            else if(val == 8){
+                window.location.href = "student.html";
+            }
+            else{
+                alert("Entered username is wrong. Please check and try again");
+            }
+        }
+
+
+
+        // function teacher(){
+        //     window.location.href = "teacher.html";
+            // window.open(teacher.html);
+            // document.getElementById("compiler").style.background = "gray";
+        // }
+    </script>
+</body>
+</html>

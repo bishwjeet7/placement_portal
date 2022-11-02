@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/teacherStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Teacher</title>
+</head>
+<body>
+    <!-- <h2>student</h2> -->
+    <div id="menu">
+        <menu>
+            <i id="bar" class="fa-solid fa-bars"></i>
+            <div id="menuBox">
+                <div id="todo" class="menubar">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div class="menuName">To Do</div>
+                </div>
+                <div id="listFilterBlockUnblockStudent" class="menubar">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div class="menuName">List / Filter / Block / Un-Block Student</div>
+                </div>
+                <div id="createDrive" class="menubar">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div class="menuName">Create Drives</div>
+                </div>
+                <div id="registerStudent" class="menubar">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="menuName">Register Student</div>
+                </div>
+                <div id="teacherAnnouncement" class="menubar">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="menuName">Announcement</div>
+                </div>
+                <div id="viewDrives" class="menubar">
+                    <i class="fa-solid fa-address-card"> </i>
+                    <div class="menuName">View Drives</div>
+                </div>
+                <div id="teacherSummary" class="menubar">
+                    <i class="fa-solid fa-file"></i>
+                    <div class="menuName">Summary</div>
+                </div>
+            </div>
+        </menu>
+        <div id="logout">
+            <div class="userlogout">
+                <i class="fa-solid fa-user"></i>
+                <div class="labelName">Bishwjeet </div>
+            </div>
+            <div class="userlogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <div class="labelName" id="logoutuserFromSesson">Logout</div>
+            </div>
+        </div>
+    </div>
+    <div id="contentBox">
+        <div id="toDoBox">
+            <div class="toDoForTeacher">
+                <h3>To Do</h3>
+            </div>
+            <div id="to">
+                <div class="uk-child-width-1-3@s" uk-grid>
+                    <div>
+                        <h4>Group 1</h4>
+                        <div uk-sortable="group: sortable-group">
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Group 2</h4>
+                        <div uk-sortable="group: sortable-group">
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Empty Group</h4>
+                        <div uk-sortable="group: sortable-group">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="listFilterStudent" style="display: none;">
+          <div class="liststudent">
+            <h4>Filter Student And Block & Un-Block</h4>
+        </div>
+            <div id="studentdata">
+                <div>
+                    <input class="searchInput" data-table-id="table1" type="search" placeholder="Search by student name" aria-label="Search"
+                      aria-target="table1">
+                  </div>
+                <div id="studentTableData">
+                  <table class="sortTable" id="table1">
+                    <thead>
+                      <tr>
+                        <th scope="col" data-type="number">Name</th>
+                        <th scope="col">CGPA</th>
+                        <th scope="col" data-type="number">Select </th>
+                        <th><a href="#">Student Details</a></th>
+                        <th><a href="#">Un-Block/Block</a></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Abhishek Kumar</td>
+                        <td>9.56</td>
+                        <td data-sort-value="3">Yes</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Sonu Kumar</td>
+                        <td>5.26</td>
+                        <td data-sort-value="2">No</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Hemant Kumar</td>
+                        <td>8.56</td>
+                        <td data-sort-value="1">Yes</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Prince kumar</td>
+                        <td>6.72</td>
+                        <td data-sort-value="3">No</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Sagarika Reddi</td>
+                        <td>8.63</td>
+                        <td data-sort-value="2">Yes</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Abhijeet Kumar</td>
+                        <td>8.02</td>
+                        <td data-sort-value="1">No</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Rahul David</td>
+                        <td>6.80</td>
+                        <td data-sort-value="3">No</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Ayush Kumar</td>
+                        <td>6.36</td>
+                        <td data-sort-value="2">No</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Vishal Kumar</td>
+                        <td>8.36</td>
+                        <td data-sort-value="1">Yes</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                      <tr>
+                        <td>Akshay Kumar</td>
+                        <td>7.23</td>
+                        <td data-sort-value="3">Yes</td>
+                        <td><a href="#">View Details</a></td>
+                        <td><a href="#">Block</a></td>
+                      </tr>
+                  
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="driveCreate" style="display: none;">
+          <div id="driveCreateHeading">
+            <h3>Drive Create</h3>
+          </div>
+          <hr>
+            <div>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label">Drive Code</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="Ex - TE.24958.2024.34282">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Company Name</label>
+                      <input type="text" class="form-control" id="inputPassword4" placeholder="Tata Consultancy">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Name & Type of Event</label>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Select ...</option>
+                        <option value="1">COMPETETIVE EVENT</option>
+                        <option value="2">Internship</option>
+                        <option value="3">Placement</option>
+                        <option value="3">Internship / Placement</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Salary</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="₹ 50,000">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Designation</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="NA">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Eligibility</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="No Backlog">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Salary Package</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="Price / Salary">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Job Location</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="Noida / Delhi / Work From Home(WFH)">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Year Passing Out</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="2023 / 2024 / 2025">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Venue</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="From your Respective Location">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Drive Date</label>
+                      <input type="date" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Register By</label>
+                      <input type="date" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Eligible Gender</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option value="Boy">Boy</option>
+                        <option value="Girls">Girls</option>
+                        <option value="Transgender">Transgender</option>
+                        <option>Boy / Girls</option>
+                        <option>Boy / Girls / Transgender</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">Last Date of Registration</label>
+                      <input type="date" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">About Company</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Compaany summary">
+                    </div>
+                  </form>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label"><strong>Program/Stream : </strong></label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">B.Tech CSE/IT</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">M.Tech CSE/IT (Companies)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">B.Tech EEE</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">B.Tech ECE</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">B.Tech Automobile</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">MBA</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">B.Tech Aerospace Engineering</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">B.Tech ME Mechatronics</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">MBA (Dual/Integrated with BBA/B.Com)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">MBA (Dual/Integrated with B.Tech)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">M.Tech CSE/IT (Companies)</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">BCA</label>
+                    </div>
+                </div>
+                <br>
+                <h6><strong>Job  Profile PDF : </strong></h6>
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" id="inputGroupFile02">
+                  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        This is to be hear by that all the infomration has been checked twice before submitting and all the details has been approved by the concern department and person.
+                      </label>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- drive publish button -->
+                <div class="col-12">
+                    <button type="submit" id="publishDrive" class="btn btn-primary">Publish Drive</button>
+                  </div>
+
+                  <!-- when drive publish button clicked it will show success message -->
+                  <div id="successShow" class="uk-alert-success" uk-alert style="display: none;">
+                    <a class="uk-alert-close" uk-close></a>
+                    <p>Drive SuccessFull created and Published</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- register student continer -->
+        <div id="regStudent" style="display: none;">
+          <div id="studentdata">
+            <div>
+                <input class="searchInput" data-table-id="table1" type="search" placeholder="Search" aria-label="Search"
+                  aria-target="table1">
+              </div>
+            <div id="studentTableDataRegStudent">
+              <table class="sortTable" id="table1">
+                <thead>
+                  <tr>
+                    <th scope="col" data-type="number">Name</th>
+                    <th scope="col">CGPA</th>
+                    <th>Register student</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Abhishek Kumar</td>
+                    <td>9.56</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Sonu Kumar</td>
+                    <td>5.26</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Hemant Kumar</td>
+                    <td>8.56</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Prince kumar</td>
+                    <td>6.72</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Sagarika Reddi</td>
+                    <td>8.63</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Abhijeet Kumar</td>
+                    <td>8.02</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Rahul David</td>
+                    <td>6.80</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Ayush Kumar</td>
+                    <td>6.36</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Vishal Kumar</td>
+                    <td>8.36</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                  <tr>
+                    <td>Akshay Kumar</td>
+                    <td>7.23</td>
+                    <td><a href="#">Register</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+        </div>
+
+        <div id="announcement" style="display: none;">
+          <div id="announcementMainBox">
+            <div class="message">
+                <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+            </div>
+            <div class="message">
+              <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+              <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+              <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+              <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+              <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+          </div>
+          <div class="message">
+            <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+            <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+            <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+            <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+            <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+        </div>
+        <div class="message">
+          <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+          <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+          <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+          <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+          <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+      </div>
+      <div class="message">
+        <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+        <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+        <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+        <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+        <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+    </div>
+    <div class="message">
+                <p><strong>Reporting Schedule for the selection process of WEBKUL OC.16441.2023.33090.  </strong> (10/10/2022)</p>
+                <p>The public pre-submission evaluation of the Ph.D. research scholar Mr. Puneet Thapar (Registration No: - 41800563), Discipline of Computer Science & Engineering under the supervision of Dr. Manik is scheduled on 14th October 2022 from 12:00 PM. The title of the Ph.D. thesis is “CLASSIFICATION OF SKIN CANCER DISEASE USING MACHINE LEARNING APPROACH”. The pre-submission seminar is openly defended. Any interested research scholar and faculty member can attend the session on 14th October 2022 Room No. 28-201 at 12:00 PM. </p>
+                <p><strong>In case of any query you are required to follow the following RMS link: -</strong></p>
+                <p>UMS Navigation --> Relationship Management System --> Log Request --> Select Message Type (Enquiry) --> Select Category (Academic and administrative issues) --> Select Department (Ph.D. - Research Degree Evaluation Cell) --> Select Sub-category (Pre-Submission evaluation related).</p>
+                <p><Strong>Upload By - </Strong>Bishwjeet Kumar <br>Division of Career Services </p>
+            </div>
+        </div>
+        </div>
+        <div id="driveView" style="display: none;">
+          <div id="upcomingDrivesregestrationBox">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Job Profile</th>
+                    <!-- <th>Last Date</th> -->
+                </tr>
+                <tr> 
+                    <td>TCS</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Infosis</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Capzamni</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Cognizent</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Adobe</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Google</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Yahoo</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Meta</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Amazon</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+                <tr> 
+                    <td>Suzlon</td>
+                    <td><button class="js-modal-trigger" data-target="modal-js-example">Details</button></button></td>
+                    <!-- <td><button type="button">Click To Register</button></td> -->
+                </tr>
+            </table>
+        </div>
+        </div>
+        <div id="summary" style="display: none;">
+            <div id="teacheSumm">
+              <h3>Summary</h3>
+            </div>
+            <div id="compDetail">
+              <form>
+                <div id="summaryinfoleft">
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="selectedprogram">Total Drives Held</label>
+                        <label class="lebelBold" for="programselected">8882</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="regno">Total Company </label>
+                        <label class="lebelBold" for="myreg">950</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="regno">Total Student Eligibal</label>
+                        <label class="lebelBold" for="myreg">8300</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="regno">Today stuednt placed</label>
+                        <label class="lebelBold" for="myreg">4800</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="regno">Avg CTC by company</label>
+                        <label class="lebelBold" for="myreg">7.62</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="regno">Highest CTC</label>
+                        <label class="lebelBold" for="myreg">60.00L</label>
+                    </div>
+                    <div class="placementinputField">
+                        <label class="lebelBold" for="name">Total Blocked/ Barried student for Placement</label>
+                        <label>390</label>
+                    </div>
+                </div>
+              </form>
+              <hr>
+              <div>
+                <h3>Top 10 recuriter company</h3>
+                <form>
+                  <div id="summaryinfoleft">
+                    <div class="placementinputField">
+                      <label class="lebelBold" for="regno">Reflik</label>
+                      <label class="lebelBold" for="myreg">1500</label>
+                  </div>
+                  <div class="placementinputField">
+                    <label class="lebelBold" for="regno">Alcor</label>
+                    <label class="lebelBold" for="myreg">1245</label>
+                </div>
+                <div class="placementinputField">
+                  <label class="lebelBold" for="regno">uplers</label>
+                  <label class="lebelBold" for="myreg">1150</label>
+              </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="selectedprogram">TCS</label>
+                          <label class="lebelBold" for="programselected">982</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="regno">Infosis</label>
+                          <label class="lebelBold" for="myreg">950</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="regno">Congnigent</label>
+                          <label class="lebelBold" for="myreg">837</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="regno">CapZamni</label>
+                          <label class="lebelBold" for="myreg">750</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="regno">Uplers</label>
+                          <label class="lebelBold" for="myreg">722</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="regno">Gini TAlent</label>
+                          <label class="lebelBold" for="myreg">640</label>
+                      </div>
+                      <div class="placementinputField">
+                          <label class="lebelBold" for="name"> Alliance Recruitment Agency
+                            Alliance Recruitment Agency </label>
+                          <label>590</label>
+                      </div>
+                  </div>
+                </form>
+                <hr>
+                <h3>Student placed in MNC Company</h3>
+                <img src="img/chart.png" alt="">
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/teacherScript.js"></script>
+    <script src="js/searchTable.js"></script>
+    <script src="js/sortTable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

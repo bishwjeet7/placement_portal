@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%s;
+    display: flex;
+    color: black;
+}
+#menu{
+    width: 15%;
+    background: black;
+    color: white;
+    height: 100vh;
+}
+
+/*  ------Favico menu ---- */
+#menu #bar{
+    display: flex;
+    float: right;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+#menu #bar:hover{
+    cursor: pointer;
+}
+
+/* ------ END ------ */
+#menuBox{
+    width: 100%;
+    padding: 30% 0 0 0;
+}
+
+#menuBox .menubar{
+    margin: 15px;
+    display: inline-flex;
+}
+#menuBox .menubar:hover{
+    cursor: pointer;
+}
+#menuBox .menubar .menuName{
+    padding: 0 0 0 25px;
+}
+/*Logout and user name*/
+#logout{
+    margin-top: 14em;
+    width: 100%;
+}
+
+#logout .userlogout{
+    display: inline-flex;
+    margin: 15px;
+}
+#logout .userlogout:hover{
+    cursor: pointer;
+}
+#logout .userlogout .labelName{
+    padding: 0 0 0 25px;
+}
+
+/*---------- END --------- */
+
+
+#contentBox{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,gray, rgb(90, 81, 66));
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+#content, #profileView, #announcement, #upcomingDrives, #driveRegestaion, #summary{
+    padding: 2vw;
+}
+
+@media screen and (max-width: 580px) {
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+    #menu #menuBox .menubar .menuName{
+        display: none;
+    }
+}
+
+
+
+
+/*------- Career Services Registration -------*/
+#contentBox #content .Career_Services_Registration{
+    height: 5vh;
+    width: 100%;
+    background: rgb(10, 25, 239);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+}
+
+#contentBox #content .Career_Services_Registration h3{
+    text-align: center;
+    color: white;
+}
+.placementinputField{
+    margin-bottom: 10px;
+  }
+  .placementinputFieldGender input{
+    margin-bottom: 10px;
+  }
+  .placementinputFieldGender label {
+    display: inline-block;
+    width: 150px;
+  }
+  .placementinputField label {
+    display: inline-block;
+    /* width: 150px; */
+    width: 45%;
+  }
+  .placementinputField input,select{
+    width: 22%;
+    height: 4vh;
+  }
+  .placementinputField input{
+    width: 45%;
+    height: 4vh;
+  }
+  #placementpage{
+    height: 5vh;
+    width: 100%;
+    background: rgb(87, 87, 90);
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+    text-align: center;
+  }
+
+
+
+
+
+  #personal_detail{
+    width: 100%;
+    /* display: block; */
+    display: inline-block;
+  }
+  #infoleft{
+    width: 49%;
+    float: left;
+  }
+  #inforight{
+    width: 49%;
+    float: right;
+  }
+
+  #useraddress{
+    height: 5vh;
+    width: 100%;
+    background: rgb(87, 87, 90);
+    text-align: center;
+  }
+  #address{
+    width: 100%;
+    display: inline-block;
+  }
+  #usercurrenteducation{
+    height: 5vh;
+    width: 100%;
+    background: rgb(87, 87, 90);
+    text-align: center;
+  }
+  #currentedu{
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .placementQualificationdetail{
+    margin-bottom: 10px;
+  }
+  .placementQualificationdetail input{
+    margin-bottom: 10px;
+  }
+  .placementQualificationdetail label {
+    display: inline-block;
+    width: 300px;
+  }
+
+  .lebelBold{
+    font-weight: 600;
+  }
+
+/* ----------------- END -------------------*/
+
+
+/* --------- PROFILE VIEW START ---------- */
+/* #userimage{
+} */
+#profileimg{
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px 0px gray;
+  width: 150px;
+  margin-left: 40%;
+}
+
+
+/* --------- PROFILE VIEW END ---------- */
+
+/* --------- Upcoming drive END ---------- */
+
+#upcomingDrivesregestrationBox{
+  width: 100%;
+  /* table-layout: fixed; */
+  overflow-x: auto;
+}
+#upcomingDrivesregestrationBox table{
+  border-collapse: collapse;
+  border: 1px solid black;
+  /* margin: 0 20px; */
+  width: 100%;
+  text-align: center;
+  /* table-layout: fixed; */
+}
+#upcomingDrivesregestrationBox table,tr,th,td{
+  /* width: 100%; */
+  border: 1px solid black;
+  padding: 2%;
+  height: 6vh;
+}
+#upcomingDrivesregestrationBox table td button{
+  margin-top: 5px;
+  font-size: 2vh;
+  width: 30%;
+  height: 4vh;
+  background-color: darkgoldenrod;
+  border: none;
+  border-radius: 6px;
+}
+#upcomingDrivesregestrationBox table td button:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 580px){
+  #upcomingDrivesregestrationBox table td button{
+    margin-top: 8px;
+    font-size: 1.3vh;
+    width: 70%;
+    height: 4vh;
+  } 
+}
+/* --------- Upcoming drive END ---------- */
+
+
+/* Announcement */ 
+
+#announcementMainBox{
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  overflow: scroll;
+  /* background-color: cadetblue; */
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.message{
+  padding: 10px 15px 0 15px;
+  background-color: rgb(241, 241, 238);
+}
+.message:nth-child(even) {
+  background: rgb(202, 201, 199);
+}
+
+/* END */
+
+
+#summaryinfoleft{
+  width: 100%;
+}
